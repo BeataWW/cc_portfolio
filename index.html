@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
@@ -7,8 +7,9 @@
 	<script src="https://kit.fontawesome.com/a09b61bc7b.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="years()">
 	<header class="header_page" id="myBtn" onclick="myFunction()">
 		<div class="menu-icon container" > 
 			<div class="bar1"></div>
@@ -18,7 +19,7 @@
 		<nav class="navigation nav-list">
 			<a href="#id_about">About me</a>
 			<a href="#id_skills">Skills</a>
-			<a href="#id_pictures">Pictures</a>
+			<a href="#id_hobby">Hobby</a>
 			<a href="#id_contact">Contact</a>
 		</nav>
 	</header>
@@ -32,92 +33,60 @@
 	</header>
 	<div class="about">
 		<h3 id="id_about">About me</h3>
-		<div class="container my_description">
-			<img src="photo/my_photo.jpg" alt="My photo" class="my_photo">
-			<div class="short_description container6">
-				<p>Name: Beata Wlazły</p>
-				<p>Age: 25</p>
-				<p>Mail: beata_wlazly@o2.pl</p>
+		<div class="description_all">
+			<div class="container my_description">
+				<img src="photo/my_photo.jpg" alt="My photo" class="my_photo">
+				<div class="short_description container6">
+					<p>Name: Beata Wlazły</p>
+					<p id="old"></p>
+					<p>Mail: beata_wlazly@o2.pl</p>
+				</div>
 			</div>
+			<p class="description">"Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+			commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+			dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+			qui officia deserunt mollit anim id est laborum."</p>
 		</div>
-		<p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	</div>
+	<div class="skills">
+		<h3 id="id_skills">Skills</h3>
+		<div class="skills_container">
+			<button class="button cplus"></button>
+			<button class="button android"></button>
+			<button class="button ruby"></button>
+			<button class="button python"></button>
+		</div>
 	</div>
 	<div>
-		<h3 id="id_pictures">Some pictures</h3>
-		<img src="photo/flag_kor.png" alt="Korean flag" class="flag">
-		<img src="photo/flag_sp.png" alt="Spanish flag" class="flag">
-		<img src="photo/pic_moun.JPG" alt="Mountain" class="flag">
-		<img src="photo/pic_airplane.jpg" alt="View" class="flag">
-	</div>
-	<div class="Skills">
-		<h3 id="id_skills">Skills</h3>
-		<ul>
-			<li>
-				C++
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				Python
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				SQL
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				HTML
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				CSS
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-		</ul>
+		<h3 id="id_hobby">Hobby</h3>
+		<div class="photos hobby">
+			<div class="polaroid rotate_right">
+				<div class="polaroid_photo airplane"></div>
+				<p class="caption">Travel</p>
+			</div>
+			<div class="polaroid rotate_left">
+				<div class="polaroid_photo milan"></div>
+				<p class="caption">Milan</p>
+			</div>		
+			<div class="polaroid rotate_right">
+				<div class="polaroid_photo vienna"></div>
+				<p class="caption">Vienna</p>
+			</div>
+			<div class="polaroid rotate_left">
+				<div class="polaroid_photo mountains"></div>
+				<p class="caption">Mountains</p>
+			</div>
+			<div class="polaroid rotate_right">
+				<div class="polaroid_photo cat"></div>
+				<p class="caption">Lilianna</p>
+			</div>
+			<div class="polaroid rotate_left">
+				<div class="polaroid_photo korea"></div>
+				<p class="caption">Korea</p>
+			</div>
+		</div>
 	</div>
 		<h3 id="id_contact">Contact</h3>
 	<div class="container contact_me">
@@ -133,11 +102,11 @@
 			<span class="fab fa-linkedin"></span>
 		</div>
 		<div class="form_contact">
-			<form action="" method="POST">
+			<form action="mailto:mail@gmail.com" method="post">
 				<input type="text" name="name" placeholder="Name"><br>
-				<input type="text" name="email" placeholder="Your email"><br>
-				<input type="text" name="title" placeholder="Title"><br>
-				<textarea name="message" placeholder="Write message" rows="4" wrap="soft"></textarea><br>
+				<input type="text" name="email" placeholder="Your email" required><br>
+				<input type="text" name="title" placeholder="Title" required><br>
+				<textarea name="message" placeholder="Write message" rows="4" wrap="soft" required></textarea><br>
 				<input type="submit" value="Submit" id="submit_button">
 			</form>
 		</div>
