@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/style.css">
 	<title>My homepage</title>
 	<script src="https://kit.fontawesome.com/a09b61bc7b.js"></script>
@@ -25,8 +26,15 @@
 	</header>
 	<header class="header_sec">
 		<div class="icons">
-			<img src="photo/GitHub-Mark-32px.png" alt="Ikonka githuba">
-			<img src="photo/facebook_icon.png" alt="Ikonka facebooka" width="34px" height="34px">
+			<a href="https://github.com/beataww" target="_blank">
+				<img src="photo/GitHub-Mark-32px.png" alt="Ikonka githuba">
+			</a>
+			<a href="https://facebook.com" target="_blank">
+				<img src="photo/facebook_icon.png" alt="Ikonka facebooka" width="auto" height="34px">
+			</a>
+			<a href="https://pl.linkedin.com/" target="_blank">
+				<img src="photo/LI-logo.png" alt="Ikonka Linkedin" width="auto" height="32">
+			</a>	
 		</div>
 		<h1 id="welcome_animation">Welcome</h1>
 		<h1 id="website_animation">to my website</h1>
@@ -34,72 +42,125 @@
 	<div class="about">
 		<h3 id="id_about">About me</h3>
 		<div class="description_all">
-			<div class="container my_description">
+			<div class="my_description">
 				<img src="photo/my_photo.jpg" alt="My photo" class="my_photo">
 				<div class="short_description container6">
 					<p>Name: Beata Wlazły</p>
 					<p id="old"></p>
 					<p>Mail: beata_wlazly@o2.pl</p>
 				</div>
+				<div>
+					<p class="description">I'm a student at Poznań University of Economics and Business.</p>
+				</div>
 			</div>
-			<p class="description">"Lorem ipsum dolor sit amet, consectetur
-			adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-			commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-			dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-			qui officia deserunt mollit anim id est laborum."</p>
 		</div>
 	</div>
 	<div class="skills">
 		<h3 id="id_skills">Skills</h3>
 		<div class="skills_container">
-			<button class="button cplus"></button>
-			<button class="button android"></button>
-			<button class="button ruby"></button>
-			<button class="button python"></button>
+			<button class="button cplus" onclick="skills('cplus')"></button>
+			<div class="language_description" id="cplus" onclick="skills('cplus')">
+				<ul class="list_experience">
+					<li><span class="lang_header">C++</span></li>
+					<li>Mistrzostwa Wielkopolski w Programowaniu Zespołowym (Poznan Open Team Programming Championship)</li>
+					<li>Desktop application for learning words</li>
+				</ul>
+			</div>
+			<button class="button android" onclick="skills('android')"></button>
+			<div class="language_description" id="android" onclick="skills('android')">
+				<ul class="list_experience">
+					<li><span class="lang_header">Android</span></li>
+					<li>Medication management application</li>
+				</ul>
+			</div>
+			<button class="button ruby" onclick="skills('ruby')"></button>
+			<div class="language_description" id="ruby" onclick="skills('ruby')">
+				<ul class="list_experience">
+					<li><span class="lang_header">Ruby</span></li>
+					<li>Workshops: Code:me - Hello summer!</li>
+				</ul>
+			</div>
+			<button class="button python" onclick="skills('python')"></button>
+			<div class="language_description" id="python" onclick="skills('python')">
+				<ul class="list_experience">
+					<li><span class="lang_header">Python</span></li>
+					<li>Basic apps</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div>
 		<h3 id="id_hobby">Hobby</h3>
 		<div class="photos hobby">
-			<div class="polaroid rotate_right">
-				<div class="polaroid_photo airplane"></div>
-				<p class="caption">Travel</p>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo travel"></div>
+					<p class="caption">I love to <span style="font-weight: bold;">TRAVEL</span>. </p>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo travel2"></div>
+					<p class="caption">Polish mountains.</p>
+				</div>
 			</div>
-			<div class="polaroid rotate_left">
-				<div class="polaroid_photo milan"></div>
-				<p class="caption">Milan</p>
-			</div>		
-			<div class="polaroid rotate_right">
-				<div class="polaroid_photo vienna"></div>
-				<p class="caption">Vienna</p>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo korea"></div>
+					<p class="caption">Korea</p>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo korea2"></div>
+					<p class="caption">First concert</p>
+				</div>
 			</div>
-			<div class="polaroid rotate_left">
-				<div class="polaroid_photo mountains"></div>
-				<p class="caption">Mountains</p>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo dance"></div>
+					<p class="caption">Attention dance team</p>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo dance2"></div>
+					<p class="caption">Kolejorz Girls</p>
+				</div>
 			</div>
-			<div class="polaroid rotate_right">
-				<div class="polaroid_photo cat"></div>
-				<p class="caption">Lilianna</p>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo sport"></div>
+					<p class="caption">Lech Poznań</p>
+				</div>
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo sport2"></div>
+					<p class="caption">Volleyball</p>
+				</div>
 			</div>
-			<div class="polaroid rotate_left">
-				<div class="polaroid_photo korea"></div>
-				<p class="caption">Korea</p>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo cat"></div>
+					<p class="caption">Lilianna</p>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo cat2"></div>
+					<p class="caption">Agapeanimali</p>
+				</div>
 			</div>
 		</div>
 	</div>
 		<h3 id="id_contact">Contact</h3>
-	<div class="container contact_me">
+	<div class="contact_me">
 		<div class="description_contact">
 			<i class="far fa-paper-plane"></i>
 			<p class="send_me">Send me a message and I will answer you as soon as possible!</p>
 			<br>
 			<br>
 			<br>
-			<span class="fab fa-twitter"></span>
-			<span class="fab fa-facebook"></span>
-			<span class="fab fa-github"></span>
-			<span class="fab fa-linkedin"></span>
+			<a href="https://github.com/beataww" target="_blank">
+				<span class="fab fa-github"></span>
+			</a>
+			<a href="https://facebook.com" target="_blank">
+				<span class="fab fa-facebook"></span>
+			</a>
+			<a href="https://pl.linkedin.com/" target="_blank">
+				<span class="fab fa-linkedin"></span>
+			</a>
 		</div>
 		<div class="form_contact">
 			<form action="mailto:mail@gmail.com" method="post">

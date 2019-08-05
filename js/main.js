@@ -12,3 +12,7 @@ function years(){
   let years = Math.floor((d-d2) / 31536000000)
   document.getElementById("old").innerHTML = "Age: "+years;
 }
+
+function skills(lang){
+  document.getElementById(lang).classList.toggle("language_description_visible");
+}
