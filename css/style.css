@@ -10,6 +10,11 @@ body{
 	/*background: linear-gradient(161deg, #6284ff 0%, #c0dee4 33%, #e9d178 66%, #e796ca 100%);*/
 }
 
+h2{
+	margin: 0;
+	padding: 0;
+}
+
 h3{
 	background-color: #E5ECFF;
 	margin: 0;
@@ -234,6 +239,23 @@ a{
 	height: 163px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	transition: all 0.9s;
+}
+.polaroid_photo:hover{
+	transform: rotateY(180deg);
+}
+.polaroid_back {
+	position: relative;
+	text-align: center;
+	background-color: #555;
+	color: white;
+	transform: rotateY(180deg);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.polaroid_back:hover{
+	opacity: 1;
 }
 .travel{
 	background-image: url("../photo/pic_airplane.jpg");
@@ -273,7 +295,7 @@ div.polaroid {
 	margin-top: 20px;
 	margin-left: 10px;
 	width: 234px;
-	padding: 10px 10px 20px 10px;
+	padding: 10px 10px 40px 10px;
 	border: 1px solid #BFBFBF;
 	background-color:#E6E6E6;
 	box-shadow: 10px 10px 5px #aaaaaa;
@@ -289,10 +311,6 @@ div.rotate_left {
 	-ms-transform: rotate(-8deg); /* IE 9 */
 	-webkit-transform: rotate(-8deg); /* Safari */
 	transform: rotate(-8deg);
-}
-.caption{
-	text-align: justify;
-	font-size: 14px;
 }
 .hobby_pic{
 	padding-bottom: 40px;
@@ -368,8 +386,8 @@ div.rotate_left {
 	.nav-list a{
 		display: inline-block;
 		color: #000000;
-		font-family: 'Lora', serif;
-		font-size: 1.1rem;
+		font-family: inherit;
+		font-size: 0.9rem;
 		padding: 7px;
 		border-radius: 40%;
 		background-image: url("../photo/cloud4.png");
@@ -421,7 +439,7 @@ div.rotate_left {
 	.nav-list a{
 		display: inline-block;
 		color: #000000;
-		font-family: 'Lora', serif;
+		font-family: inherit;
 		font-size: 1.1rem;
 		padding: 7px;
 		border-radius: 40%;
