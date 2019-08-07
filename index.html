@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/style.css">
 	<title>My homepage</title>
 	<script src="https://kit.fontawesome.com/a09b61bc7b.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="years()">
 	<header class="header_page" id="myBtn" onclick="myFunction()">
 		<div class="menu-icon container" > 
 			<div class="bar1"></div>
@@ -18,126 +20,194 @@
 		<nav class="navigation nav-list">
 			<a href="#id_about">About me</a>
 			<a href="#id_skills">Skills</a>
-			<a href="#id_pictures">Pictures</a>
+			<a href="#id_hobby">Hobby</a>
 			<a href="#id_contact">Contact</a>
 		</nav>
 	</header>
 	<header class="header_sec">
 		<div class="icons">
-			<img src="photo/GitHub-Mark-32px.png" alt="Ikonka githuba">
-			<img src="photo/facebook_icon.png" alt="Ikonka facebooka" width="34px" height="34px">
+			<a href="https://github.com/beataww" target="_blank">
+				<img src="photo/GitHub-Mark-32px.png" alt="Ikonka githuba">
+			</a>
+			<a href="https://facebook.com" target="_blank">
+				<img src="photo/facebook_icon.png" alt="Ikonka facebooka" width="auto" height="34px">
+			</a>
+			<a href="https://pl.linkedin.com/" target="_blank">
+				<img src="photo/LI-logo.png" alt="Ikonka Linkedin" width="auto" height="32">
+			</a>	
 		</div>
 		<h1 id="welcome_animation">Welcome</h1>
 		<h1 id="website_animation">to my website</h1>
 	</header>
 	<div class="about">
 		<h3 id="id_about">About me</h3>
-		<div class="container my_description">
-			<img src="photo/my_photo.jpg" alt="My photo" class="my_photo">
-			<div class="short_description container6">
-				<p>Name: Beata Wlazły</p>
-				<p>Age: 25</p>
-				<p>Mail: beata_wlazly@o2.pl</p>
+		<div class="description_all">
+			<div class="my_description">
+				<img src="photo/my_photo.jpg" alt="My photo" class="my_photo">
+				<div class="short_description container6">
+					<p>Name: Beata Wlazły</p>
+					<p id="old"></p>
+					<p>Mail: beata_wlazly@o2.pl</p>
+				</div>
+				<div>
+					<p class="description">I'm a student at Poznań University of Economics and Business.</p>
+				</div>
 			</div>
 		</div>
-		<p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	</div>
+	<div class="skills">
+		<h3 id="id_skills">Skills</h3>
+		<div class="skills_container">
+			<button class="button cplus" onclick="skills('cplus')"></button>
+			<div class="language_description" id="cplus" onclick="skills('cplus')">
+				<ul class="list_experience">
+					<li><span class="lang_header">C++</span></li>
+					<li>Mistrzostwa Wielkopolski w Programowaniu Zespołowym (Poznan Open Team Programming Championship)</li>
+					<li>Desktop application for learning words</li>
+				</ul>
+			</div>
+			<button class="button android" onclick="skills('android')"></button>
+			<div class="language_description" id="android" onclick="skills('android')">
+				<ul class="list_experience">
+					<li><span class="lang_header">Android</span></li>
+					<li>Medication management application</li>
+				</ul>
+			</div>
+			<button class="button ruby" onclick="skills('ruby')"></button>
+			<div class="language_description" id="ruby" onclick="skills('ruby')">
+				<ul class="list_experience">
+					<li><span class="lang_header">Ruby</span></li>
+					<li>Workshops: Code:me - Hello summer!</li>
+				</ul>
+			</div>
+			<button class="button python" onclick="skills('python')"></button>
+			<div class="language_description" id="python" onclick="skills('python')">
+				<ul class="list_experience">
+					<li><span class="lang_header">Python</span></li>
+					<li>Basic apps</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<div>
-		<h3 id="id_pictures">Some pictures</h3>
-		<img src="photo/flag_kor.png" alt="Korean flag" class="flag">
-		<img src="photo/flag_sp.png" alt="Spanish flag" class="flag">
-		<img src="photo/pic_moun.JPG" alt="Mountain" class="flag">
-		<img src="photo/pic_airplane.jpg" alt="View" class="flag">
-	</div>
-	<div class="Skills">
-		<h3 id="id_skills">Skills</h3>
-		<ul>
-			<li>
-				C++
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				Python
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				SQL
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				HTML
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-			<li>
-				CSS
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot skill"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-				<div class="dot"></div>
-			</li>
-		</ul>
+		<h3 id="id_hobby">Hobby</h3>
+		<div class="photos hobby">
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo travel">
+						<div class="polaroid_back">
+							<h2>TRAVEL</h2>
+							<p>I love to travel. I have been to Spain, Germany, France, Italy, Austria and Czech Republic so far.</p>
+						</div>
+					</div>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo travel2">
+						<div class="polaroid_back">
+							<h2>MOUNTAINS</h2>
+							<p>In my free time I like to hiking. Most often climbing the peaks of the Tatras.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo korea">
+						<div class="polaroid_back">
+							<h2>KOREA</h2>
+							<p>I'm interested in Korean culture and history.</p>
+						</div>
+					</div>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo korea2">
+						<div class="polaroid_back">
+							<h2>CONCERT</h2>
+							<p>A lot of k-pop concerts are taken in Poland.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo dance">
+						<div class="polaroid_back">
+							<h2>ATTENTION - dance cover gruop</h2>
+							<p>I combine my passion for Korea and dancing by creating a dance group covering Korean choreographies.</p>
+						</div>
+					</div>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo dance2">
+						<div class="polaroid_back">
+							<h2>KOLEJORZ GIRLS</h2>
+							<p>I danced at football matches for several years.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo sport">
+						<div class="polaroid_back">
+							<h2>LECH POZNAŃ</h2>
+							<p>I am also interested in sport, from a young age I attended Lech Poznań matches.</p>
+						</div>
+					</div>
+				</div>
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo sport2">
+						<div class="polaroid_back">
+							<h2>VOLLEYBALL</h2>
+							<p>I also like to watch and play volleyball.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hobby_pic">
+				<div class="polaroid rotate_right">
+					<div class="polaroid_photo cat">
+						<div class="polaroid_back">
+							<h2>ANIMALS</h2>
+							<p>I love animals.</p>
+						</div>
+					</div>
+				</div>
+				<div class="polaroid rotate_left">
+					<div class="polaroid_photo cat2">
+						<div class="polaroid_back">
+							<h2>AGAPEANIMALI</h2>
+							<p>I am a volunteer at a cat foundation.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 		<h3 id="id_contact">Contact</h3>
-	<div class="container contact_me">
+	<div class="contact_me">
 		<div class="description_contact">
 			<i class="far fa-paper-plane"></i>
 			<p class="send_me">Send me a message and I will answer you as soon as possible!</p>
 			<br>
 			<br>
 			<br>
-			<span class="fab fa-twitter"></span>
-			<span class="fab fa-facebook"></span>
-			<span class="fab fa-github"></span>
-			<span class="fab fa-linkedin"></span>
+			<a href="https://github.com/beataww" target="_blank">
+				<span class="fab fa-github"></span>
+			</a>
+			<a href="https://facebook.com" target="_blank">
+				<span class="fab fa-facebook"></span>
+			</a>
+			<a href="https://pl.linkedin.com/" target="_blank">
+				<span class="fab fa-linkedin"></span>
+			</a>
 		</div>
 		<div class="form_contact">
-			<form action="" method="POST">
+			<form action="mailto:mail@gmail.com" method="post">
 				<input type="text" name="name" placeholder="Name"><br>
-				<input type="text" name="email" placeholder="Your email"><br>
-				<input type="text" name="title" placeholder="Title"><br>
-				<textarea name="message" placeholder="Write message" rows="4" wrap="soft"></textarea><br>
+				<input type="text" name="email" placeholder="Your email" required><br>
+				<input type="text" name="title" placeholder="Title" required><br>
+				<textarea name="message" placeholder="Write message" rows="4" wrap="soft" required></textarea><br>
 				<input type="submit" value="Submit" id="submit_button">
 			</form>
 		</div>
